@@ -8,14 +8,12 @@ function addBinary(a: string, b: string): string {
   while (i >= 0 || j >= 0 || carry > 0) {
     const bitA = i >= 0 ? parseInt(a[i]) : 0;
     const bitB = j >= 0 ? parseInt(b[j]) : 0;
-    console.log({ bitA });
-    console.log({ bitB });
 
     const calculate = bitA + bitB + carry;
     carry = 0;
     if (calculate >= 2) {
       carry++;
-      result.unshift("0");
+      result.unshift((calculate%2).toString());
     } else {
       result.unshift(String(calculate));
     }
@@ -28,8 +26,10 @@ function addBinary(a: string, b: string): string {
 
 // const a = "11";
 // const b = "1";
-const a = "1010";
-const b = "1011";
+// const a = "1010";
+// const b = "1011";
+const a = "1111";
+const b = "1111";
 console.log(addBinary(a, b));
 
 // function addBinary(a: string, b: string): string {
