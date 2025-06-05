@@ -24,7 +24,7 @@ function twoCrystalBalls(breaks: boolean[]): number {
 }
 // const array = [false, false, false, false, false, true, true, true, true, true];
 // const array = [true, true, true, true, true, true, true, true, true, true];
-const array = [
+const temperatures = [
   false,
   false,
   false,
@@ -37,7 +37,7 @@ const array = [
   true,
 ];
 
-console.log(twoCrystalBalls(array));
+console.log(twoCrystalBalls(temperatures));
 
 // O(√n)
 // find the first true from array
