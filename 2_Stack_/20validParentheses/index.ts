@@ -73,3 +73,32 @@ console.log(isValid("()[]{}"));
 // console.log(isValid("(({[]})"));
 // console.log(isValid("]})"));
 // console.log(isValid("(])"));
+
+// function isValid(s: string): boolean {
+//   if(s.length <=1) return false
+//   const brackets = {
+//       '(': ')',
+//       '{': '}',
+//       '[': ']'
+//   }
+
+//   let buffer = []
+
+//   for (let i = 0; i < s.length; i++) {
+//       if (s[i] === '(' || s[i] === '{' || s[i] === '[') {
+//           buffer.push(s[i])
+//       } else {
+//           if (buffer.length === 0) return false;
+//           if (brackets[buffer[buffer.length - 1]] === s[i]) {
+//               buffer.pop()
+//           }else{
+//               return false
+//           }
+//       }
+//   }
+//   if (buffer.length === 0) {
+//       return true
+//   } else {
+//       return false
+//   }
+// };
