@@ -1,12 +1,17 @@
 function merge(nums1: number[], m: number, nums2: number[], n: number): void {
   let k = nums1.length - 1;
-  for (let i = nums2.length - 1; i < nums2.length; i++) {
-    if (nums1[m] < nums2[i]) {
-      nums1[k] = nums2[i];
-      k--;
+  let i = m - 1;
+  let j = n - 1;
+
+  while (j >= 0) {
+    if (i >= 0 && nums1[i] > nums2[j]) {
+      nums1[k] = nums1[i];
+      i--;
     } else {
-      nums1[m - 1] = nums2[i];
+      nums1[k] = nums2[j];
+      j--;
     }
+    k--;
   }
 }
 
@@ -15,4 +20,5 @@ const m = 3;
 const nums2 = [2, 5, 6];
 const c = 3;
 
-console.log(merge(nums1, m, nums2, c));
+merge(nums1, m, nums2, c);
+console.log(nums1);

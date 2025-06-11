@@ -23,18 +23,29 @@
 // console.log(isAnagram(sLetter,tLetter))
 
 function isAnagram(s: string, t: string): boolean {
-    if(s.length !== t.length) return false
+  if (s.length !== t.length) return false;
 
- const sSort = s.split('').sort().join('')
- const tSort = t.split('').sort().join('')
+  const sSort = s.split("").sort().join("");
+  const tSort = t.split("").sort().join("");
 
- return sSort=== tSort
+  return sSort === tSort;
+}
 
-};
-
-const sLetter = "anagram"
-const tLetter = "nagaram"
+const sLetter = "anagram";
+const tLetter = "nagaram";
 // const sLetter = "rat"
 // const tLetter = "car"
 
-console.log(isAnagram(sLetter,tLetter))
+console.log(isAnagram(sLetter, tLetter));
+
+// function isAnagram(s: string, t: string): boolean {
+//     if(s.length !== t.length) return false
+// return s.split('').sort().join('') === t.split('').sort().join('')
+// };
+
+// // const sLetter = "anagram"
+// // const tLetter = "nagaram"
+// const sLetter = "rat"
+// const tLetter = "car"
+
+// console.log(isAnagram(sLetter,tLetter))
